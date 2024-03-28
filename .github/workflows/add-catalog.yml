@@ -54,7 +54,7 @@ jobs:
             else 
               url_type=$(jq -r ".[$idx].catalog_data.imageURL | type" temp.json)
               if [[ $url_type == "array" ]]; then
-                  patternImageURL="$(jq -r ".[$idx].catalog_data.imageURL | join(\",\")" temp.json)"
+                  patternImageURL=$(jq -r ".[$idx].catalog_data.imageURL[]" temp.json | jq -r 'join(",")')
               fi
               
             fi
