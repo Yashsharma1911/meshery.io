@@ -44,4 +44,4 @@ jobs:
           mesheryToken: ${{ secrets.MESHERY_TOKEN }}
           prNumber: ${{ env.PULL_NO }}
           application_type: Kubernetes Manifest
-          filePath: ${{ inputs.fileName == '' && '.github/labeler.yml' || inputs.fileName }}
+          filePath: ${{ inputs.fileName == '' && 'catalog/02413809-9fbf-4649-ae22-3d0947d264c6/design.yml' || inputs.fileName }}
